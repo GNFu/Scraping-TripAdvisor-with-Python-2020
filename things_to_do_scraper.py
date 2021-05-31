@@ -23,6 +23,9 @@ if (len(sys.argv) == 4):
 driver = webdriver.Safari()
 driver.get(url)
 
+# accept cookies
+driver.find_element_by_xpath("//*[@id='_evidon-accept-button']").click()
+
 # open the file to save the review
 csvFile = open(path_to_file, 'a', encoding="utf-8")
 csvWriter = csv.writer(csvFile)
